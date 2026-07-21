@@ -80,6 +80,15 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+        
+        zenkaku_hankaku_layer: zenkaku_hankaku_layer {
+            compatible = "zmk,behavior-hold-tap";
+            label = "ZENKAKU_HANKAKU_LAYER";
+            bindings = <&mo>, <&zenkaku_hankaku_macro>;
+            
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
     };
 
     keymap {
@@ -87,10 +96,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E           &kp R                       &kp T                                                                       &kp Y                   &kp U  &lt 5 I    &kp O &kp P
-&kp A             &kp S         &kp D           &kp F                       &kp G        &lt_to_layer_0 5 LEFT_ARROW      &lt_to_layer_0 4 PRINTSCREEN  &kp H                   &kp J  &kp K      &kp L &kp SEMICOLON
-&mt LEFT_SHIFT Z  &kp X         &kp C           &kp V                       &kp B        &lt_to_layer_0 6 TAB             &kp DELETE                    &kp N                   &kp M  &kp COMMA  &kp DOT &kp SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_SHIFT  &zenkaku_hankaku_macro      &lt 1 SPACE  &lt_to_layer_0 3 LEFT_ALT        &kp BACKSPACE                 &lt_to_layer_0 2 ENTER                         &kp RSHIFT
+&kp Q             &kp W         &kp E           &kp R                              &kp T                                                                       &kp Y                   &kp U  &lt 5 I    &kp O &kp P
+&kp A             &kp S         &kp D           &kp F                              &kp G        &lt_to_layer_0 5 LEFT_ARROW      &lt_to_layer_0 4 PRINTSCREEN  &kp H                   &kp J  &kp K      &kp L &kp SEMICOLON
+&mt LEFT_SHIFT Z  &kp X         &kp C           &kp V                              &kp B        &lt_to_layer_0 6 TAB             &kp DELETE                    &kp N                   &kp M  &kp COMMA  &kp DOT &kp SLASH
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_SHIFT  &zenkaku_hankaku_layer 3 0         &lt 1 SPACE  &lt_to_layer_0 3 LEFT_ALT        &kp BACKSPACE                 &lt_to_layer_0 2 ENTER                         &kp RSHIFT
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
