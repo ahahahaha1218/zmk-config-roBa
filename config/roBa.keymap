@@ -62,20 +62,6 @@
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
-
-        lang4_macro: lang4_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LANG4>;
-            label = "LANG4";
-        };
-
-        lang5_macro: lang5_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LANG5>;
-            label = "LANG5";
-        };
     };
 
     behaviors {
