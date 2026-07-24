@@ -126,10 +126,10 @@
 
         FUNCTION {
             bindings = <
-&kp F1        &kp F2         &kp F3   &kp F4    &kp F5                                 &kp F6         &kp AT_SIGN           &kp F6  &kp F9   &kp F12
-&kp ASTERISK  &kp SEMICOLON  &kp SQT  &kp PIPE  &kp RIGHT_BRACKET  &trans      &trans  &kp BACKSLASH  &kp NON_US_BACKSLASH  &kp F7  &kp F10  &kp HASH
-&none         &kp AMPERSAND  &none    &none     &kp LS(N9)         &trans      &trans  &kp LS(N0)     &kp DOLLAR            &kp F8  &kp F11  &kp EXCLAMATION
-&trans        &trans         &trans   &trans    &trans             &trans      &trans  &trans                                                &kp TILDE
+&kp F1        &kp F2          &kp F3            &kp F4    &kp F5                                 &kp F6         &kp AT_SIGN           &kp F6  &kp F9   &kp F12
+&kp ASTERISK  &semi_or_colon  &quote_or_double  &kp PIPE  &kp RIGHT_BRACKET  &trans      &trans  &kp BACKSLASH  &kp NON_US_BACKSLASH  &kp F7  &kp F10  &kp HASH
+&none         &kp AMPERSAND   &none             &none     &kp LS(N9)         &trans      &trans  &kp LS(N0)     &kp DOLLAR            &kp F8  &kp F11  &kp EXCLAMATION
+&trans        &trans          &trans            &trans    &trans             &trans      &trans  &trans                                                &kp TILDE
             >;
         };
 
