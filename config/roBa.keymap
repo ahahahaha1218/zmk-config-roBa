@@ -115,7 +115,7 @@
 
         default_layer {
             bindings = <
-&kp Q      &kp W         &kp E         &kp R           &kp T                                                                           &kp Y                   &kp U  &lt 5 P    &kp O    &lt 5 P
+&kp Q      &kp W         &kp E         &kp R           &kp T                                                                           &kp Y                   &kp U  &lt 5 P    &kp O    &kp P
 &kp A      &kp S         &kp D         &kp F           &kp G                 &lt_to_layer_0 6 TAB        &lt_to_layer_0 4 PRINTSCREEN  &kp H                   &kp J  &kp K      &kp L    &minus_or_under
 &kp Z      &kp X         &kp C         &kp V           &kp B                 &td_ime                     &kp DELETE                    &kp N                   &kp M  &kp COMMA  &kp DOT  &kp SLASH
 &kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_SHIFT  &lt_to_layer_0 1 TAB  &lt_to_layer_0 2 SPACE      &kp BACKSPACE                 &lt_to_layer_0 3 ENTER                             &mt LS(F10) ESCAPE
