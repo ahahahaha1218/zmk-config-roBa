@@ -3,6 +3,31 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
+// OS設定を日本語キーボードのまま使用するための変換定義
+#define JP_DQUOTE       AT                // "
+#define JP_AMPERSAND    CARET             // &
+#define JP_QUOTE        AMPERSAND         // '
+#define JP_EQUAL        UNDER             // =
+#define JP_CARET        EQUAL             // ^
+#define JP_YEN          0x89              // ¥
+#define JP_PLUS         COLON             // +
+#define JP_TILDE        PLUS              // ~
+#define JP_PIPE         LS(0x89)          // |
+#define JP_AT           LEFT_BRACKET      // @
+#define JP_COLON        SINGLE_QUOTE      // :
+#define JP_ASTERISK     DOUBLE_QUOTES     // *
+#define JP_BACKQUOTE    LEFT_BRACE        // `
+#define JP_UNDERSCORE   LS(0x87)          // _
+#define JP_LBRACKET     RIGHT_BRACKET     // [
+#define JP_RBRACKET     BACKSLASH         // ]
+#define JP_LPAREN       ASTERISK          // (
+#define JP_RPAREN       LEFT_PARENTHESIS  // )
+#define JP_LBRACE       RIGHT_BRACE       // {
+#define JP_RBRACE       PIPE              // }
+#define JP_KANA         LANGUAGE_1        // かな
+#define JP_EISU         LANGUAGE_2        // 英数
+#define JP_HANZEN       GRAVE             // 半角/全角
+
 &mt {
     flavor = "balanced";
     quick-tap-ms = <0>;
@@ -85,7 +110,7 @@
         minus_or_under: minus_or_under {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp MINUS>, <&kp UNDERSCORE>;
+            bindings = <&kp MINUS>, <&kp JP_UNDERSCORE>;
 
             mods = <(MOD_LSFT|MOD_RSFT)>;
             label = "MINUS_OR_UNDER";
@@ -94,7 +119,7 @@
         quote_or_double: quote_or_double {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp SINGLE_QUOTE>, <&kp DOUBLE_QUOTES>;
+            bindings = <&kp JP_QUOTE>, <&kp JP_DQUOTE>;
 
             mods = <(MOD_LSFT|MOD_RSFT)>;
             label = "QUOTE_OR_DOUBLE";
@@ -103,7 +128,7 @@
         semi_or_colon: semi_or_colon {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp SEMICOLON>, <&kp COLON>;
+            bindings = <&kp SEMICOLON>, <&kp JP_COLON>;
 
             mods = <(MOD_LSFT|MOD_RSFT)>;
             label = "SEMI_OR_COLON";
@@ -126,18 +151,18 @@
 
         FUNCTION {
             bindings = <
-&kp F1        &kp F2          &kp F3            &kp F4     &kp F5                                 &kp F6         &kp AT_SIGN           &kp F6  &kp F9   &kp F12
-&kp ASTERISK  &semi_or_colon  &quote_or_double  &kp PIPE   &kp RIGHT_BRACKET  &trans      &trans  &kp BACKSLASH  &kp NON_US_BACKSLASH  &kp F7  &kp F10  &kp TILDE
-&kp HASH      &kp AMPERSAND   &kp PERCENT       &kp CARET  &kp LS(N9)         &trans      &trans  &kp LS(N0)     &kp DOLLAR            &kp F8  &kp F11  &kp EXCLAMATION
+&kp F1        &kp F2          &kp F3            &kp F4     &kp F5                                 &kp F6         &kp JP_AT           &kp F6  &kp F9   &kp F12
+&kp JP_ASTERISK  &semi_or_colon  &quote_or_double  &kp JP_PIPE   &kp JP_LBRACKET  &trans      &trans  &kp JP_RBRACKET  &kp JP_YEN  &kp F7  &kp F10  &kp JP_TILDE
+&kp HASH      &kp JP_AMPERSAND   &kp PERCENT       &kp JP_CARET  &kp JP_LPAREN         &trans      &trans  &kp JP_RPAREN     &kp DOLLAR            &kp F8  &kp F11  &kp EXCLAMATION
 &trans        &trans          &trans            &trans     &trans             &trans      &trans  &trans                                                &trans
             >;
         };
 
         NUM {
             bindings = <
-&kp MINUS                   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp PLUS                             &none          &kp HOME        &mkp MB3        &kp END          &none
-&kp SLASH                   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp ASTERISK  &trans         &trans  &kp PAGE_UP    &mkp MB1        &kp UP_ARROW    &mkp MB2         &trans
-&mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD    &kp EQUAL      &trans  &kp PAGE_DOWN  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
+&kp MINUS                   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp JP_PLUS                             &none          &kp HOME        &mkp MB3        &kp END          &none
+&kp SLASH                   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp JP_ASTERISK  &trans         &trans  &kp PAGE_UP    &mkp MB1        &kp UP_ARROW    &mkp MB2         &trans
+&mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD    &kp JP_EQUAL      &trans  &kp PAGE_DOWN  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
 &trans                      &trans           &trans           &trans           &trans        &trans         &trans  &trans                                                          &trans
             >;
         };
