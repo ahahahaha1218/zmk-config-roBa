@@ -78,13 +78,17 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             bindings = <&kp LANG1>, <&kp LANG2>;
+
+            label = "TAP_DANCE_IME";
         };
 
         minus_or_under: minus_or_under {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp MINUS>, <&kp UNDERSCORE>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
+            label = "MINUS_OR_UNDER";
         };
     };
 
