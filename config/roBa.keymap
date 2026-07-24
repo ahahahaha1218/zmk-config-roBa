@@ -91,19 +91,23 @@
             label = "MINUS_OR_UNDER";
         };
 
-	    quote_or_double: quote_or_double {
-	        compatible = "zmk,behavior-mod-morph";
-	        #binding-cells = <0>;
-	        bindings = <&kp SINGLE_QUOTE>, <&kp DOUBLE_QUOTES>;
-	        mods = <(MOD_LSFT|MOD_RSFT)>;
-	    };
-	    
-	    semi_or_colon: semi_or_colon {
-	        compatible = "zmk,behavior-mod-morph";
-	        #binding-cells = <0>;
-	        bindings = <&kp SEMICOLON>, <&kp COLON>;
-	        mods = <(MOD_LSFT|MOD_RSFT)>;
-	    };
+        quote_or_double: quote_or_double {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp SINGLE_QUOTE>, <&kp DOUBLE_QUOTES>;
+
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            label = "QUOTE_OR_DOUBLE";
+        };
+
+        semi_or_colon: semi_or_colon {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp SEMICOLON>, <&kp COLON>;
+
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            label = "SEMI_OR_COLON";
+        };
     };
 
     keymap {
