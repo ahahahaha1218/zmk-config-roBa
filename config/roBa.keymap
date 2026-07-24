@@ -144,10 +144,10 @@
 
         ARROW {
             bindings = <
-&kp ESCAPE      &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans                       &trans         &kp HOME  &trans        &kp END      &none
-&kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &trans      &trans  &kp PAGE_UP    &trans    &kp UP_ARROW  &kp PAGE_UP  &none
-&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans   &trans      &trans  &kp PAGE_DOWN  &kp LEFT  &kp DOWN      &kp RIGHT    &trans
-&trans          &trans                  &trans          &trans                   &trans   &trans      &trans  &trans                                              &trans
+&kp ESCAPE      &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans                       &trans         &kp HOME  &trans        &kp END    &none
+&kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &trans      &trans  &kp PAGE_UP    &trans    &kp UP_ARROW  &trans     &none
+&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans   &trans      &trans  &kp PAGE_DOWN  &kp LEFT  &kp DOWN      &kp RIGHT  &trans
+&trans          &trans                  &trans          &trans                   &trans   &trans      &trans  &trans                                            &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
@@ -156,8 +156,8 @@
         MOUSE {
             bindings = <
 &kp LC(Y)  &trans     &trans     &trans         &trans                         &trans  &trans    &mkp MB3  &trans    &none
-&kp LC(A)  &kp LC(S)  &trans     &kp LC(F)      &kp LC(L)  &trans      &trans  &trans  &mkp MB1  &trans    &mkp MB2  &trans
-&kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(LS(V))  &kp LC(L)  &trans      &trans  &trans  &trans    &trans    &trans    &trans
+&kp LC(A)  &kp LC(S)  &trans     &kp LC(F)      &kp LC(L)  &trans      &trans  &trans  &mkp MB1  &trans    &mkp MB2  &mkp MB4
+&kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(LS(V))  &kp LC(L)  &trans      &trans  &trans  &trans    &trans    &trans    &mkp MB5
 &trans     &trans     &trans     &trans         &trans     &trans      &trans  &trans                                &trans
             >;
         };
