@@ -152,7 +152,7 @@
 
         FUNCTION {
             bindings = <
-&kp F1           &kp F2            &kp F3            &kp F4        &kp F5                               &kp F6           &kp JP_AT   &kp F6  &kp F9   &kp F12
+&kp F1           &kp F2            &kp F3            &kp F4        &kp F5                               &kp F6           &kp JP_AT   &kp F6  &kp F9   &mt RIGHT_SHIFT F12
 &kp JP_ASTERISK  &semi_or_colon    &quote_or_double  &kp JP_PIPE   &kp JP_LBRACKET  &trans      &trans  &kp JP_RBRACKET  &kp JP_YEN  &kp F7  &kp F10  &kp JP_TILDE
 &kp HASH         &kp JP_AMPERSAND  &kp PERCENT       &kp JP_CARET  &kp JP_LPAREN    &trans      &trans  &kp JP_RPAREN    &kp DOLLAR  &kp F8  &kp F11  &kp EXCLAMATION
 &trans           &trans            &trans            &trans        &trans           &trans      &trans  &trans                                        &trans
